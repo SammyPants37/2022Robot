@@ -7,12 +7,10 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.StartEndCommand;
 import frc.robot.commands.atonGroup;
-import frc.robot.commands.collectorMotors;
-import frc.robot.commands.stopCollectorMotors;
 import frc.robot.subsystems.BallMotors;
 import frc.robot.subsystems.DriveTrain;
 
@@ -50,6 +48,10 @@ public class RobotContainer {
     () -> BallMotors.runShooter(1.0),
     () -> BallMotors.stopShooter(),
     Balls);
+
+  //////////////////////
+  // no more commands //
+  //////////////////////
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
