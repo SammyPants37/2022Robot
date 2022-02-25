@@ -31,8 +31,8 @@ public class RobotContainer {
 
   private final BallMotors Balls = new BallMotors();
 
-  final JoystickButton leftSwich = new JoystickButton(controller, 4);
-  final JoystickButton rightSwich = new JoystickButton(controller, 5);
+  final JoystickButton shooterSwich = new JoystickButton(controller, Constants.shooterChannel);
+  // final JoystickButton collecterSwich = new JoystickButton(controller, Constants.collectorChannel);
 
   // public static AHRS gyro;
 
@@ -40,12 +40,12 @@ public class RobotContainer {
   // COMMANDS //
   //////////////
 
-  StartEndCommand collectRun = new StartEndCommand(
-    () -> BallMotors.runCollecor(1.0),
-    () -> BallMotors.stopCollector(),
-    Balls);
+  // StartEndCommand collectRun = new StartEndCommand(
+  //   () -> BallMotors.runCollecor(Constants.collectorSpeed),
+  //   () -> BallMotors.stopCollector(),
+  //   Balls);
   StartEndCommand shootRun = new StartEndCommand(
-    () -> BallMotors.runShooter(1.0),
+    () -> BallMotors.runShooter(Constants.shooterSpeed),
     () -> BallMotors.stopShooter(),
     Balls);
 
@@ -66,8 +66,8 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    leftSwich.whileHeld(collectRun);
-    rightSwich.whileHeld(shootRun);
+    // collecterSwich.whileHeld(collectRun);
+    shooterSwich.whileHeld(shootRun);
   }
   
   // public void zeroGyro() {

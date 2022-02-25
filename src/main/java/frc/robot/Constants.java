@@ -29,6 +29,9 @@ public final class Constants {
     public static double speedMax = 0.9;
     public static int rotChannel = 4;
     public static int speedChannel = 1;
+    public static int collectorChannel = 6;
+    public static int collectorSwich = 3;
+    public static int shooterChannel = 5;
 
     public static boolean GyroInversed = false;
 }
